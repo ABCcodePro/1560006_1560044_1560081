@@ -51,8 +51,74 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\frmCachDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmCachDung.Designer.cs">
+      <DependentUpon>frmCachDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmDonVi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmDonVi.Designer.cs">
+      <DependentUpon>frmDonVi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmDSBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmDSBenhNhan.Designer.cs">
+      <DependentUpon>frmDSBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmLoaiBenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmLoaiBenh.Designer.cs">
+      <DependentUpon>frmLoaiBenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmThuoc.Designer.cs">
+      <DependentUpon>frmThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmTienKham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmTienKham.Designer.cs">
+      <DependentUpon>frmTienKham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\PhanMemQuanLyPhongMach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\PhanMemQuanLyPhongMach.Designer.cs">
+      <DependentUpon>PhanMemQuanLyPhongMach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmCachDung.resx">
+      <DependentUpon>frmCachDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmDonVi.resx">
+      <DependentUpon>frmDonVi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmDSBenhNhan.resx">
+      <DependentUpon>frmDSBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmLoaiBenh.resx">
+      <DependentUpon>frmLoaiBenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmThuoc.resx">
+      <DependentUpon>frmThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmTienKham.resx">
+      <DependentUpon>frmTienKham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\PhanMemQuanLyPhongMach.resx">
+      <DependentUpon>PhanMemQuanLyPhongMach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -74,6 +140,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BUS\" />
+    <Folder Include="DAO\" />
+    <Folder Include="DTO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
