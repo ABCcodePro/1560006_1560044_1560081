@@ -1,3 +1,4 @@
+use master
 if DB_ID ('QLNhaThuocTu') is not null
 drop database QLNhaThuocTu
 go
@@ -154,6 +155,6 @@ references DonVi(ma_don_vi)
 -- HoaDon - TienKham
 Alter table HoaDon
 Add constraint FK_HoaDon_TienKham
-Foreign key (tien_kham)
+Foreign key (ma_tien_kham)
 references TienKham(ma_tien_kham)
 
