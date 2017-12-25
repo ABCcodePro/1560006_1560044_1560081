@@ -69,11 +69,23 @@
     <Compile Include="Presentation\frmDSBenhNhan.Designer.cs">
       <DependentUpon>frmDSBenhNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\frmHoaDonThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmHoaDonThanhToan.Designer.cs">
+      <DependentUpon>frmHoaDonThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\frmLoaiBenh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentation\frmLoaiBenh.Designer.cs">
       <DependentUpon>frmLoaiBenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmPhieuKhamBenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmPhieuKhamBenh.Designer.cs">
+      <DependentUpon>frmPhieuKhamBenh.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\frmThuoc.cs">
       <SubType>Form</SubType>
@@ -86,6 +98,12 @@
     </Compile>
     <Compile Include="Presentation\frmTienKham.Designer.cs">
       <DependentUpon>frmTienKham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmTraCuuBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmTraCuuBenhNhan.Designer.cs">
+      <DependentUpon>frmTraCuuBenhNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PhanMemQuanLyPhongMach.cs">
       <SubType>Form</SubType>
@@ -107,14 +125,23 @@
     <EmbeddedResource Include="Presentation\frmDSBenhNhan.resx">
       <DependentUpon>frmDSBenhNhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmHoaDonThanhToan.resx">
+      <DependentUpon>frmHoaDonThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmLoaiBenh.resx">
       <DependentUpon>frmLoaiBenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmPhieuKhamBenh.resx">
+      <DependentUpon>frmPhieuKhamBenh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmThuoc.resx">
       <DependentUpon>frmThuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmTienKham.resx">
       <DependentUpon>frmTienKham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmTraCuuBenhNhan.resx">
+      <DependentUpon>frmTraCuuBenhNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\PhanMemQuanLyPhongMach.resx">
       <DependentUpon>PhanMemQuanLyPhongMach.cs</DependentUpon>

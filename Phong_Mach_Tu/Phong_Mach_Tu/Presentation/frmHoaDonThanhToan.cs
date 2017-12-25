@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Phong_Mach_Tu.Presentation
 {
-    public partial class PhanMemQuanLyPhongMach : Form
+    public partial class frmHoaDonThanhToan : Form
     {
-        public PhanMemQuanLyPhongMach()
+        public frmHoaDonThanhToan()
         {
             InitializeComponent();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cáchDủngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }
