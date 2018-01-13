@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Phong_Mach_Tu.DAO
 {
-    class PHieuKhamBenhDAO
+    public class PhieuKhamBenhDAO
     {
+
     }
 }

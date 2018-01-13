@@ -17,7 +17,7 @@ namespace Phong_Mach_Tu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTraCuuBenhNhan());
+            Application.Run(new PhanMemQuanLyPhongMach());
         }
     }
 }

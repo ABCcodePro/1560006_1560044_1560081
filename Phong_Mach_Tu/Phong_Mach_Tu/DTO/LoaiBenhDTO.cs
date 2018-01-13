@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Phong_Mach_Tu.DTO
 {
     class LoaiBenhDTO
     {
+        public string Ma { get; set; }
+        public string Ten { get; set; }
     }
 }
