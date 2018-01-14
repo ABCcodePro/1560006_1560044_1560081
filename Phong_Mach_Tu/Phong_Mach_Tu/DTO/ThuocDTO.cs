@@ -8,5 +8,11 @@ namespace Phong_Mach_Tu.DTO
 {
     class ThuocDTO
     {
+        public string MaThuoc { get; set; }
+        public string TenThuoc { get; set; }
+        public string DonVi { get; set; }
+        public string CachDung { get; set; }
+        public int SoLuong { get; set; }
+        public int GiaThuoc { get; set; }
     }
 }

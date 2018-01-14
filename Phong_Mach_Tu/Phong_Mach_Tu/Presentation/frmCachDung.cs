@@ -60,13 +60,13 @@ namespace Phong_Mach_Tu.Presentation
             DbAck ack = CachDungBUS.Delete(CachDung);
             if (ack == DbAck.Ok)
             {
-                MessageBox.Show("Thong bao", "Loi khong xac dinh");
+                MessageBox.Show("Thong bao", "Xoa Thanh cong");
             }
             else
             {
                 if (ack == DbAck.Unknown)
                 {
-                    MessageBox.Show("Thong bao", "Xoa Thanh cong");
+                    MessageBox.Show("Thong bao", "Loi khong xac dinh");
                 }
                 else
                 {

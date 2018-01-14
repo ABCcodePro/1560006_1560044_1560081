@@ -74,7 +74,7 @@ namespace Phong_Mach_Tu.DAO
 
             DbAck result = DataProvider.ExecNonQuery(sql, parameter);
 
-            return DbAck.Unknown;
+            return DbAck.Ok;
         }
     }
 }
