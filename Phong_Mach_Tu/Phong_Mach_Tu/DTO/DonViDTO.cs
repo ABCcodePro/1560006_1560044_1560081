@@ -8,5 +8,6 @@ namespace Phong_Mach_Tu.DTO
 {
     class DonViDTO
     {
+        public string TenDonVi { get; set; }
     }
 }
