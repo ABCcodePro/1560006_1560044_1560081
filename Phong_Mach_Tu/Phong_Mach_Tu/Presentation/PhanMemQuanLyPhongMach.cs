@@ -44,5 +44,12 @@ namespace Phong_Mach_Tu.Presentation
             frmTienKham tienkham = new frmTienKham();
             tienkham.ShowDialog();
         }
+        //chuyển form Thuốc
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmThuoc Thuoc = new frmThuoc();
+            Thuoc.ShowDialog();
+        }
+        
     }
 }

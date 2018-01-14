@@ -8,5 +8,6 @@ namespace Phong_Mach_Tu.DTO
 {
     class TienKhamDTO
     {
+        public int Tien { get; set; }
     }
 }

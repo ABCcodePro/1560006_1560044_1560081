@@ -100,9 +100,9 @@ Go
 
 create table TienKham
 (
-	ma_tien_kham nchar(10),
+	
 	tien_kham int
-	primary key(ma_tien_kham)	
+	primary key(tien_kham)	
 )
 -------------------------------------------------------------------------------------------------
 go
@@ -156,5 +156,5 @@ references DonVi(ma_don_vi)
 Alter table HoaDon
 Add constraint FK_HoaDon_TienKham
 Foreign key (ma_tien_kham)
-references TienKham(ma_tien_kham)
+references TienKham(tien_kham)
 
