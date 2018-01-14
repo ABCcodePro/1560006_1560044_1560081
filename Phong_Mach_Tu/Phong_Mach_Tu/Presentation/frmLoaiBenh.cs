@@ -43,6 +43,8 @@ namespace Phong_Mach_Tu.Presentation
                 }
             }
             loadListLoaiBenh();
+            txtMaLoaiBenh.Text = null;
+            txtTenLoaiBenh.Text = null;
         }
 
 
