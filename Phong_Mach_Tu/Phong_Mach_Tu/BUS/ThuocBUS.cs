@@ -54,5 +54,12 @@ namespace Phong_Mach_Tu.BUS
 
             return result;
         }
+
+        //public static ThuocDTO getThuoc(string Ma)
+        //{
+        //    ThuocDTO thuoc = null;
+        //     thuoc = ThuocDAO.getThuoc(Ma);
+        //    return thuoc;
+        //}
     }
 }

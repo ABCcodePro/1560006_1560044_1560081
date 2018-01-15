@@ -84,5 +84,31 @@ namespace Phong_Mach_Tu.DAO
 
             return DbAck.Ok;
         }
+
+        //public static ThuocDTO getThuoc(string Ma)
+        //{
+            
+        //    string sql = "select * from Thuoc where ma_thuoc = @Ma";
+        //    Dictionary<string, object> parameter = new Dictionary<string, object>();
+        //    parameter.Add("@Ma", Ma);
+           
+        //    DataTable dt = DataProvider.ExecQuery(sql);
+        //    ThuocDTO thuoc = new ThuocDTO();
+
+
+        //    foreach (DataRow row in dt.Rows)
+        //        {
+
+        //            thuoc.MaThuoc = row.ItemArray[0].ToString();
+        //            thuoc.TenThuoc = row.ItemArray[1].ToString();
+        //            thuoc.DonVi = row.ItemArray[2].ToString();
+        //            thuoc.CachDung = row.ItemArray[3].ToString();
+        //            thuoc.SoLuong = int.Parse(row.ItemArray[4].ToString());
+        //            thuoc.GiaThuoc = int.Parse(row.ItemArray[5].ToString());
+
+        //        }
+            
+        //    return thuoc;
+        //}
     }
 }
