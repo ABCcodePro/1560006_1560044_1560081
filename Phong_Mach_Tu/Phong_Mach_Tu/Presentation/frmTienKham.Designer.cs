@@ -102,6 +102,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmTienKham";
             this.Text = "frmTienKham";
+            this.Load += new System.EventHandler(this.frmTienKham_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -14,7 +14,7 @@ namespace Phong_Mach_Tu.BUS
         {
             List<CTPhieuDTO> listCTPhieuKhamBenh = null;
 
-            // Doc thong tin danh sach hoc sinh
+            
             listCTPhieuKhamBenh = CTPhieuDAO.SelectAllCTPhieuKhamBenh();
 
             return listCTPhieuKhamBenh;

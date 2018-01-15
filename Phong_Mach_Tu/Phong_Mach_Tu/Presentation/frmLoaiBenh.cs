@@ -29,13 +29,13 @@ namespace Phong_Mach_Tu.Presentation
             DbAck ack = LoaiBenhBUS.Insert(loaiBenh);
             if (ack == DbAck.Ok)
             {
-                MessageBox.Show("Thong bao", "Them Thanh Cong");
+                MessageBox.Show("Thêm thành công", "Thông báo");
             }
             else
             {
                 if (ack == DbAck.Unknown)
                 {
-                    MessageBox.Show("Thong bao", "Loi khong xac dinh");
+                    MessageBox.Show("Lỗi không xác định", "Thông báo");
                 }
                 else
                 {
@@ -75,13 +75,13 @@ namespace Phong_Mach_Tu.Presentation
             DbAck ack = LoaiBenhBUS.Delete(loaiBenh);
             if (ack == DbAck.Ok)
             {
-                MessageBox.Show("Thong bao", "Loi khong xac dinh");
+                MessageBox.Show("Lỗi không xác định", "Thông báo");
             }
             else
             {
                 if (ack == DbAck.Unknown)
                 {
-                    MessageBox.Show("Thong bao", "Xoa Thanh cong");
+                    MessageBox.Show("Xoá thành công", "Thông báo");
                 }
                 else
                 {
@@ -99,13 +99,13 @@ namespace Phong_Mach_Tu.Presentation
             DbAck ack = LoaiBenhBUS.Update(loaiBenh);
             if (ack == DbAck.Ok)
             {
-                MessageBox.Show("Thong bao", "Thay doi Thanh Cong");
+                MessageBox.Show("Thay đổi thành công", "Thông báo");
             }
             else
             {
                 if (ack == DbAck.Unknown)
                 {
-                    MessageBox.Show("Thong bao", "Loi khong xac dinh");
+                    MessageBox.Show("Lỗi không xác định", "Thông báo");
                 }
                 else
                 {

@@ -47,13 +47,13 @@ namespace Phong_Mach_Tu.Presentation
             DbAck ack = DonViBUS.Insert(DonVi);
             if (ack == DbAck.Ok)
             {
-                MessageBox.Show("Thong bao", "Them Thanh Cong");
+                MessageBox.Show("Thêm Thành Công", "Thông báo");
             }
             else
             {
                 if (ack == DbAck.Unknown)
                 {
-                    MessageBox.Show("Thong bao", "Loi khong xac dinh");
+                    MessageBox.Show("Lỗi không xác định", "Thông báo");
                 }
                 else
                 {
@@ -72,13 +72,13 @@ namespace Phong_Mach_Tu.Presentation
             DbAck ack = DonViBUS.Delete(DonVi);
             if (ack == DbAck.Ok)
             {
-                MessageBox.Show("Thong bao", "Loi khong xac dinh");
+                MessageBox.Show("Lỗi không xác định", "Thông báo");
             }
             else
             {
                 if (ack == DbAck.Unknown)
                 {
-                    MessageBox.Show("Thong bao", "Xoa Thanh cong");
+                    MessageBox.Show("Thêm Thành Công", "Thông báo");
                 }
                 else
                 {

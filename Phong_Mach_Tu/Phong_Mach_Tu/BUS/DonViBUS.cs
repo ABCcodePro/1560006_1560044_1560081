@@ -14,7 +14,7 @@ namespace Phong_Mach_Tu.BUS
         {
             List<DonViDTO> listDonVi = null;
 
-            // Doc thong tin danh sach hoc sinh
+            
             listDonVi = DonViDAO.SelectAllDonVi();
 
             return listDonVi;
@@ -23,7 +23,7 @@ namespace Phong_Mach_Tu.BUS
         public static DbAck Insert(DonViDTO DonVi)
         {
 
-            // Xu ly kiem tra va tinh toan
+           
             DbAck result = DbAck.Unknown;
 
             result = DonViDAO.Insert(DonVi);
@@ -32,17 +32,7 @@ namespace Phong_Mach_Tu.BUS
             return result;
         }
 
-        //public static DbAck Update(DonViDTO DonVi)
-        //{
-
-        //    // Xu ly kiem tra va tinh toan
-        //    DbAck result = DbAck.Unknown;
-
-        //    result = DonViDAO.Update(DonVi);
-
-
-        //    return result;
-        //}
+        
 
         public static DbAck Delete(DonViDTO DonVi)
         {

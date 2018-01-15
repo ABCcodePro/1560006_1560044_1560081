@@ -15,7 +15,7 @@ namespace Phong_Mach_Tu.BUS
         {
             List<CachDungDTO> listCachDung = null;
 
-            // Doc thong tin danh sach hoc sinh
+            
             listCachDung = CachDungDAO.SelectAllCachDung();
 
             return listCachDung;
@@ -24,7 +24,7 @@ namespace Phong_Mach_Tu.BUS
         public static DbAck Insert(CachDungDTO CachDung)
         {
 
-            // Xu ly kiem tra va tinh toan
+           
             DbAck result = DbAck.Unknown;
 
             result = CachDungDAO.Insert(CachDung);
@@ -36,7 +36,7 @@ namespace Phong_Mach_Tu.BUS
         public static DbAck Update(CachDungDTO CachDung)
         {
 
-            // Xu ly kiem tra va tinh toan
+            
             DbAck result = DbAck.Unknown;
 
             result = CachDungDAO.Update(CachDung);

@@ -15,7 +15,7 @@ namespace Phong_Mach_Tu.DAO
         {
             List<CachDungDTO> listCachDung = null;
 
-            // Doc thong tin danh sach hoc sinhDung
+            
             string sql = "Select * from CachDung";
 
             DataTable dt = DataProvider.ExecQuery(sql);

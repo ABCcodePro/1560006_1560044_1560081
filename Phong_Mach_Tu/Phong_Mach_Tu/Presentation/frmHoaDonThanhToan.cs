@@ -21,5 +21,10 @@ namespace Phong_Mach_Tu.Presentation
         {
 
         }
+
+        private void frmHoaDonThanhToan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

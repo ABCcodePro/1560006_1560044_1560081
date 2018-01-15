@@ -28,13 +28,13 @@ namespace Phong_Mach_Tu.Presentation
             DbAck ack = TienKhamBUS.Update(TienKham);
             if (ack == DbAck.Ok)
             {
-                MessageBox.Show("Thong bao", "Thay doi Thanh Cong");
+                MessageBox.Show("Thay đổi thành công", "Thông báo");
             }
             else
             {
                 if (ack == DbAck.Unknown)
                 {
-                    MessageBox.Show("Thong bao", "Loi khong xac dinh");
+                    MessageBox.Show("Lỗi không xác định", "Thông báo");
                 }
                 else
                 {
@@ -48,6 +48,11 @@ namespace Phong_Mach_Tu.Presentation
         {
             frmTienKham log = new frmTienKham();
             this.Close();
+        }
+
+        private void frmTienKham_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

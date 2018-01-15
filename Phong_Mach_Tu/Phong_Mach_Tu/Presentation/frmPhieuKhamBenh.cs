@@ -62,7 +62,7 @@ namespace Phong_Mach_Tu.Presentation
             DbAck ack = PhieuKhamBenhBUS.InsertCTPhieu(phieu);
             if (ack == DbAck.Ok)
             {
-                MessageBox.Show("Thong bao", "Thay doi Thanh Cong");
+                MessageBox.Show("Thanh đổi thành công", "Thông báo");
                // LoadDsThuoc();
 
 
@@ -72,7 +72,7 @@ namespace Phong_Mach_Tu.Presentation
             {
                 if (ack == DbAck.Unknown)
                 {
-                    MessageBox.Show("Thong bao", "Loi khong xac dinh");
+                    MessageBox.Show("Lỗi không xác định", "Thông báo");
                 }
                 else
                 {

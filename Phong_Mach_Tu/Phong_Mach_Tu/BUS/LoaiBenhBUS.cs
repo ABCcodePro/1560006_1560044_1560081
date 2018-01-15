@@ -14,7 +14,7 @@ namespace Phong_Mach_Tu.BUS
         {
             List<LoaiBenhDTO> listLoaiBenh = null;
 
-            // Doc thong tin danh sach hoc sinh
+           
             listLoaiBenh = LoaiBenhDAO.SelectAllLoaiBenh();
 
             return listLoaiBenh;

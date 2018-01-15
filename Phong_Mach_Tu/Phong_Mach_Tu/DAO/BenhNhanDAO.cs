@@ -15,7 +15,7 @@ namespace Phong_Mach_Tu.DAO
         {
             List<BenhNhanDTO> listBenhNhan = null;
 
-            // Doc thong tin danh sach hoc sinhDung
+            
             string sql = "Select * from BenhNhan";
 
             DataTable dt = DataProvider.ExecQuery(sql);
@@ -56,30 +56,5 @@ namespace Phong_Mach_Tu.DAO
             return result;
         }
 
-        //public static DbAck Update(BenhNhanDTO CachDung)
-        //{
-
-        //    string sql = "update CachDung set cach_su_dung = @Ten where ma_cach_dung= @Ma";
-
-        //    Dictionary<string, object> parameter = new Dictionary<string, object>();
-        //    parameter.Add("@Ma", CachDung.Ma);
-        //    parameter.Add("@Ten", CachDung.Ten);
-
-
-        //    DbAck result = DataProvider.ExecNonQuery(sql, parameter);
-
-        //    return result;
-        //}
-
-        //public static DbAck Delete(BenhNhanDTO CachDung)
-        //{
-        //    string sql = "delete from CachDung where ma_cach_dung = @Ma";
-        //    Dictionary<string, object> parameter = new Dictionary<string, object>();
-        //    parameter.Add("@Ma", CachDung.Ma);
-
-        //    DbAck result = DataProvider.ExecNonQuery(sql, parameter);
-
-        //    return DbAck.Ok;
-        //}
     }
 }

@@ -16,7 +16,7 @@ namespace Phong_Mach_Tu.DAO
         {
             List<DonViDTO> listDonVi = null;
             string sql = "Select * from DonVi";
-            // Doc thong tin danh sach hoc sinhDung
+           
             DataTable dt = DataProvider.ExecQuery(sql);
             
             if (dt != null && dt.Rows.Count > 0)
@@ -51,21 +51,6 @@ namespace Phong_Mach_Tu.DAO
 
             return result;
         }
-
-        //public static DbAck Update(DonViDTO DonVi)
-        //{
-
-        //    string sql = "update DonVi set ten_don_vi = @Ten";
-
-        //    Dictionary<string, object> parameter = new Dictionary<string, object>();
-           
-        //    parameter.Add("@Ten", DonVi.TenDonVi);
-
-
-        //    DbAck result = DataProvider.ExecNonQuery(sql, parameter);
-
-        //    return result;
-        //}
 
         public static DbAck Delete(DonViDTO DonVi)
         {

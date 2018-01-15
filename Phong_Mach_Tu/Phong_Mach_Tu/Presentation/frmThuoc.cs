@@ -37,7 +37,7 @@ namespace Phong_Mach_Tu.Presentation
             cbbMaThuoc2.DisplayMember = "MaThuoc";
             cbbMaThuoc2.ValueMember = "TenThuoc";
             cbbMaThuoc2.DataSource = listThuoc;
-            //dgvDanhSachThuoc.DataSource = listCachDung;
+            
         }
         public void GetCachDung()
         {
@@ -79,7 +79,7 @@ namespace Phong_Mach_Tu.Presentation
             DbAck ack = ThuocBUS.Insert(Thuoc);
             if (ack == DbAck.Ok)
             {
-                MessageBox.Show("Thong bao", "Them Thanh Cong");
+                MessageBox.Show("Thêm thành công", "Thông báo");
                 LoadListThuoc();
                 GetMaThuoc();
                 txtMaThuoc.Text = null;
@@ -93,7 +93,7 @@ namespace Phong_Mach_Tu.Presentation
             {
                 if (ack == DbAck.Unknown)
                 {
-                    MessageBox.Show("Thong bao", "Loi khong xac dinh");
+                    MessageBox.Show("Lỗi không xác định", "thông báo");
                 }
                 else
                 {
@@ -112,7 +112,7 @@ namespace Phong_Mach_Tu.Presentation
             DbAck ack = ThuocBUS.Update(Thuoc);
             if (ack == DbAck.Ok)
             {
-                MessageBox.Show("Thong bao", "Thay doi Thanh Cong");
+                MessageBox.Show("Thay đổi thành công", "Thông báo");
                 LoadListThuoc();
                 GetMaThuoc();
                 txtGiaThuoc1.Text = null;
@@ -122,7 +122,7 @@ namespace Phong_Mach_Tu.Presentation
             {
                 if (ack == DbAck.Unknown)
                 {
-                    MessageBox.Show("Thong bao", "Loi khong xac dinh");
+                    MessageBox.Show("Lỗi không xác định", "Thông báo");
                 }
                 else
                 {
@@ -138,7 +138,7 @@ namespace Phong_Mach_Tu.Presentation
             DbAck ack = ThuocBUS.Delete(Thuoc);
             if (ack == DbAck.Ok)
             {
-                MessageBox.Show("Thong bao", "Xoa Thanh Cong");
+                MessageBox.Show("Xoá thành công", "Thông báo");
                 LoadListThuoc();
                 GetMaThuoc();
             }
@@ -146,7 +146,7 @@ namespace Phong_Mach_Tu.Presentation
             {
                 if (ack == DbAck.Unknown)
                 {
-                    MessageBox.Show("Thong bao", "Loi khong xac dinh");
+                    MessageBox.Show("Lỗi không xác định", "Thông báo");
                     
                 }
                 else

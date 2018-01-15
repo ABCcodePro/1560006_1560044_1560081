@@ -14,7 +14,7 @@ namespace Phong_Mach_Tu.BUS
         {
             List<BenhNhanDTO> listBenhNhan = null;
 
-            // Doc thong tin danh sach hoc sinh
+            
             listBenhNhan = BenhNhanDAO.SelectAllBenhNhan();
 
             return listBenhNhan;
@@ -23,7 +23,7 @@ namespace Phong_Mach_Tu.BUS
         public static DbAck Insert(BenhNhanDTO BenhNhan)
         {
 
-            // Xu ly kiem tra va tinh toan
+            
             DbAck result = DbAck.Unknown;
 
             result = BenhNhanDAO.Insert(BenhNhan);

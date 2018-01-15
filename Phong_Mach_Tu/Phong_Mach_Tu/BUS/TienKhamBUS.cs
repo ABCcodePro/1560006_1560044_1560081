@@ -12,7 +12,7 @@ namespace Phong_Mach_Tu.BUS
         public static DbAck Update(TienKhamDTO TienKham)
         {
 
-            // Xu ly kiem tra va tinh toan
+          
             DbAck result = DbAck.Unknown;
 
             result = TienKhamDAO.Update(TienKham);

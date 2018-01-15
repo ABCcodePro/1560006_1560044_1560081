@@ -15,7 +15,7 @@ namespace Phong_Mach_Tu.BUS
         {
             List<ThuocDTO> listThuoc = null;
 
-            // Doc thong tin danh sach hoc sinh
+            
             listThuoc = ThuocDAO.SelectAllThuoc();
 
             return listThuoc;
@@ -24,7 +24,7 @@ namespace Phong_Mach_Tu.BUS
         public static DbAck Insert(ThuocDTO Thuoc)
         {
 
-            // Xu ly kiem tra va tinh toan
+            
             DbAck result = DbAck.Unknown;
 
             result = ThuocDAO.Insert(Thuoc);
@@ -36,7 +36,7 @@ namespace Phong_Mach_Tu.BUS
         public static DbAck Update(ThuocDTO Thuoc)
         {
 
-            // Xu ly kiem tra va tinh toan
+           
             DbAck result = DbAck.Unknown;
 
             result = ThuocDAO.Update(Thuoc);
@@ -55,11 +55,6 @@ namespace Phong_Mach_Tu.BUS
             return result;
         }
 
-        //public static ThuocDTO getThuoc(string Ma)
-        //{
-        //    ThuocDTO thuoc = null;
-        //     thuoc = ThuocDAO.getThuoc(Ma);
-        //    return thuoc;
-        //}
+        
     }
 }
