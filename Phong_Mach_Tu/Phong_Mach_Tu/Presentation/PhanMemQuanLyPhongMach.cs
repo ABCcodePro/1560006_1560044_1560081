@@ -50,6 +50,13 @@ namespace Phong_Mach_Tu.Presentation
             frmThuoc Thuoc = new frmThuoc();
             Thuoc.ShowDialog();
         }
+        //chuyển form bệnh nhân
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmDSBenhNhan dsBenhNhan = new frmDSBenhNhan();
+            dsBenhNhan.ShowDialog();
+        }
         
+
     }
 }

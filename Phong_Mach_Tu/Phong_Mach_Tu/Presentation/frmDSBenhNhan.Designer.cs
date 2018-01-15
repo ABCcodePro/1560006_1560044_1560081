@@ -30,7 +30,7 @@
         {
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtSL = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
@@ -39,23 +39,24 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDsBN = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.radioNu = new System.Windows.Forms.RadioButton();
+            this.radioNam = new System.Windows.Forms.RadioButton();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.txtMaBN = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.txtNext = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDsBN)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,12 +78,13 @@
             this.label10.TabIndex = 5;
             this.label10.Text = "Ngày khám:";
             // 
-            // textBox6
+            // txtSL
             // 
-            this.textBox6.Location = new System.Drawing.Point(86, 53);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(76, 20);
-            this.textBox6.TabIndex = 4;
+            this.txtSL.Location = new System.Drawing.Point(86, 53);
+            this.txtSL.Name = "txtSL";
+            this.txtSL.Size = new System.Drawing.Size(76, 20);
+            this.txtSL.TabIndex = 4;
+            this.txtSL.Text = "30";
             // 
             // label9
             // 
@@ -111,7 +113,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.txtSL);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Location = new System.Drawing.Point(12, 35);
@@ -154,14 +156,15 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
+            // dgvDsBN
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(299, 35);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(632, 453);
-            this.dataGridView1.TabIndex = 13;
+            this.dgvDsBN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDsBN.Location = new System.Drawing.Point(299, 35);
+            this.dgvDsBN.Name = "dgvDsBN";
+            this.dgvDsBN.Size = new System.Drawing.Size(632, 453);
+            this.dgvDsBN.TabIndex = 13;
             // 
             // label2
             // 
@@ -173,34 +176,34 @@
             this.label2.Text = "2: NHẬP THÔNG TIN BỆNH NHÂN";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // radioButton2
+            // radioNu
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(163, 87);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(39, 17);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioNu.AutoSize = true;
+            this.radioNu.Location = new System.Drawing.Point(163, 87);
+            this.radioNu.Name = "radioNu";
+            this.radioNu.Size = new System.Drawing.Size(39, 17);
+            this.radioNu.TabIndex = 12;
+            this.radioNu.TabStop = true;
+            this.radioNu.Text = "Nữ";
+            this.radioNu.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioNam
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(100, 87);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(47, 17);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioNam.AutoSize = true;
+            this.radioNam.Location = new System.Drawing.Point(100, 87);
+            this.radioNam.Name = "radioNam";
+            this.radioNam.Size = new System.Drawing.Size(47, 17);
+            this.radioNam.TabIndex = 11;
+            this.radioNam.TabStop = true;
+            this.radioNam.Text = "Nam";
+            this.radioNam.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // txtDiaChi
             // 
-            this.textBox5.Location = new System.Drawing.Point(71, 163);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(174, 20);
-            this.textBox5.TabIndex = 10;
+            this.txtDiaChi.Location = new System.Drawing.Point(71, 163);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(174, 20);
+            this.txtDiaChi.TabIndex = 10;
             // 
             // label7
             // 
@@ -220,14 +223,6 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Giới tính:";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(70, 124);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(175, 20);
-            this.textBox3.TabIndex = 5;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -237,12 +232,12 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Năm sinh:";
             // 
-            // textBox2
+            // txtHoTen
             // 
-            this.textBox2.Location = new System.Drawing.Point(71, 56);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtHoTen.Location = new System.Drawing.Point(71, 56);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(174, 20);
+            this.txtHoTen.TabIndex = 3;
             // 
             // label3
             // 
@@ -255,29 +250,39 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.dateTimePicker2);
+            this.panel1.Controls.Add(this.radioNu);
+            this.panel1.Controls.Add(this.radioNam);
+            this.panel1.Controls.Add(this.txtDiaChi);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtHoTen);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtMaBN);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 210);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(266, 194);
             this.panel1.TabIndex = 11;
             // 
-            // textBox1
+            // dateTimePicker2
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.dateTimePicker2.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(77, 118);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(171, 20);
+            this.dateTimePicker2.TabIndex = 13;
+            this.dateTimePicker2.Value = new System.DateTime(2018, 1, 15, 0, 0, 0, 0);
+            // 
+            // txtMaBN
+            // 
+            this.txtMaBN.Location = new System.Drawing.Point(100, 19);
+            this.txtMaBN.Name = "txtMaBN";
+            this.txtMaBN.Size = new System.Drawing.Size(145, 20);
+            this.txtMaBN.TabIndex = 1;
+            this.txtMaBN.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -297,11 +302,22 @@
             this.button4.Text = "Hủy";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // txtNext
+            // 
+            this.txtNext.Location = new System.Drawing.Point(140, 473);
+            this.txtNext.Name = "txtNext";
+            this.txtNext.Size = new System.Drawing.Size(137, 37);
+            this.txtNext.TabIndex = 22;
+            this.txtNext.Text = "Kế tiếp";
+            this.txtNext.UseVisualStyleBackColor = true;
+            this.txtNext.Click += new System.EventHandler(this.txtNext_Click);
+            // 
             // frmDSBenhNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 518);
+            this.Controls.Add(this.txtNext);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -310,14 +326,15 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDsBN);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "frmDSBenhNhan";
             this.Text = "frmDSBenhNhan";
+            this.Load += new System.EventHandler(this.frmDSBenhNhan_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDsBN)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -329,7 +346,7 @@
 
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtSL;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label11;
@@ -338,21 +355,21 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDsBN;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.RadioButton radioNu;
+        private System.Windows.Forms.RadioButton radioNam;
+        private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaBN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;
-
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button txtNext;
     }
 }

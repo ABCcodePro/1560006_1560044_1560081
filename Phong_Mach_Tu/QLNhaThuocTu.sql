@@ -16,25 +16,25 @@ create table BenhNhan
 	dia_chi nvarchar(30)
 	primary key(ma_benh_nhan)
 )
-Go
-create table DonKham
-(
-	ma_don_kham nchar(10),
-	so_benh_nhan_toi_da int,
-	ngay_kham datetime,
-	doanh_thu_ngay int,
-	primary key(ma_don_kham)
-)
-Go
-create table CT_DonKham
-( 
-	ma_don_kham nchar(10),
-	stt int,
-	ma_benh_nhan nchar(10),
-	ngay_kham datetime
-	primary key(ma_don_kham, ma_benh_nhan)
-)
-go
+--Go
+--create table DonKham
+--(
+--	ma_don_kham nchar(10),
+--	so_benh_nhan_toi_da int,
+--	ngay_kham datetime,
+--	doanh_thu_ngay int,
+--	primary key(ma_don_kham)
+--)
+--Go
+--create table CT_DonKham
+--( 
+--	ma_don_kham nchar(10),
+--	stt int,
+--	ma_benh_nhan nchar(10),
+--	ngay_kham datetime
+--	primary key(ma_don_kham, ma_benh_nhan)
+--)
+--go
 ----------------------------------------------------------------------------------------------------
 create table PhieuKhamBenh
 (
@@ -54,9 +54,9 @@ create table LoaiBenh
 )
 create table DonVi
 (
-	ma_don_vi nchar(10),
-	ten_don_vi nvarchar(10)
-	primary key(ma_don_vi)
+	ten_don_vi nvarchar(10),
+	
+	primary key(ten_don_vi)
 )
 create table CachDung
 (
@@ -69,10 +69,10 @@ create table Thuoc
 (
 	ma_thuoc nchar(10),
 	ten_thuoc nvarchar(30),
-	don_vi nchar(10),
+	don_vi nvarchar(10),
 	cach_dung nchar(10),
 	so_luong int,
-	gia_thuoc nchar(10)
+	gia_thuoc int
 	primary key(ma_thuoc)
 )
 Go
@@ -82,19 +82,19 @@ create table HoaDon
 	ma_phieu_kham_benh nchar(10),
 	ten_benh_nhan nvarchar(30),
 	ngay_lap datetime,
-	ma_tien_kham nchar(10),
+	tien_kham int,
 	tinh_trang nvarchar(30),
 	tong_tien int
 	primary key(ma_hoa_don)		
 )
 Go
-create table CT_HoaDon
+create table CT_PhieuKhamBenh
 (	
-	hoa_don nchar(10),
+	ma_phieu_kham_benh nchar(10),
 	thuoc nchar(10),
 	so_luong int,
 	don_gia int
-	primary key(hoa_don,thuoc)
+	primary key(ma_phieu_kham_benh,thuoc)
 )
 Go
 
@@ -106,13 +106,13 @@ create table TienKham
 )
 -------------------------------------------------------------------------------------------------
 go
---CT_HoaDon-HoaDon
-Alter table CT_HoaDon
-Add constraint FK_CT_HoaDon_HoaDon
-foreign key (hoa_don)
-references HoaDon(ma_hoa_don)
+--CT_HoaDon-PhieuKhamBenh
+Alter table CT_PhieuKhamBenh
+Add constraint FK_CT_HoaDon_PhieuKhamBenh
+foreign key (ma_phieu_kham_benh)
+references PhieuKhamBenh(ma_phieu_kham_benh)
 --CT_HoaDon - Thuoc
-Alter table CT_HoaDon
+Alter table CT_PhieuKhamBenh
 Add constraint FK_CT_HoaDon_Thuoc
 foreign key (thuoc)
 references Thuoc(ma_thuoc)
@@ -122,15 +122,15 @@ Add constraint FK_HoaDon_PhieuKhamBenh
 foreign key (ma_phieu_kham_benh)
 references PhieuKhamBenh(ma_phieu_kham_benh)
 -- CT_DonKham- DonKham
-Alter table CT_DonKham
-Add constraint FK_CTDonKham_DonKham
-foreign key (ma_don_kham)
-references DonKham(ma_don_kham)
--- CT_DOnKham - BenhNhan
-Alter table CT_DonKham
-Add constraint FK_CTDonKham_BenhNhan
-foreign key (ma_benh_nhan)
-references BenhNhan(ma_benh_nhan)
+--Alter table CT_DonKham
+--Add constraint FK_CTDonKham_DonKham
+--foreign key (ma_don_kham)
+--references DonKham(ma_don_kham)
+---- CT_DOnKham - BenhNhan
+--Alter table CT_DonKham
+--Add constraint FK_CTDonKham_BenhNhan
+--foreign key (ma_benh_nhan)
+--references BenhNhan(ma_benh_nhan)
 -- PhieuKhamBenh- BenhNhan
 Alter table PhieuKhamBenh
 Add constraint FK_PhieuKhamBenh_BenhNhan
@@ -150,11 +150,11 @@ References CachDung(ma_cach_dung)
 Alter table Thuoc	
 Add constraint FK_Thuoc_DonVi
 foreign key (don_vi)
-references DonVi(ma_don_vi)
+references DonVi(ten_don_vi)
 
 -- HoaDon - TienKham
 Alter table HoaDon
 Add constraint FK_HoaDon_TienKham
-Foreign key (ma_tien_kham)
+Foreign key (tien_kham)
 references TienKham(tien_kham)
 
