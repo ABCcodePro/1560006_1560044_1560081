@@ -73,6 +73,7 @@ namespace Phong_Mach_Tu.Presentation
             Thuoc.CachDung = cbbCachDung.Text;
             Thuoc.SoLuong = int.Parse(txtSoLuong.Text);
             Thuoc.GiaThuoc = int.Parse(txtGiaThuoc.Text);
+            Thuoc.MoTa = txtMoTa.Text;
 
 
             DbAck ack = ThuocBUS.Insert(Thuoc);

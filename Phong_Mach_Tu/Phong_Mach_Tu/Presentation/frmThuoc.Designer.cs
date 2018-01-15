@@ -34,6 +34,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbbDonVi = new System.Windows.Forms.ComboBox();
+            this.btnThem = new System.Windows.Forms.Button();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -42,22 +43,23 @@
             this.txtTenThuoc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaThuoc = new System.Windows.Forms.TextBox();
-            this.btnThem = new System.Windows.Forms.Button();
             this.dgvDanhSachThuoc = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.btnThayDoi = new System.Windows.Forms.Button();
             this.txtGiaThuoc1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbbMaThuoc1 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnXoa = new System.Windows.Forms.Button();
             this.cbbMaThuoc2 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachThuoc)).BeginInit();
             this.panel2.SuspendLayout();
@@ -75,6 +77,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.txtMoTa);
             this.panel1.Controls.Add(this.cbbCachDung);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -91,7 +95,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(233, 215);
+            this.panel1.Size = new System.Drawing.Size(233, 237);
             this.panel1.TabIndex = 1;
             // 
             // cbbCachDung
@@ -127,6 +131,16 @@
             this.cbbDonVi.Name = "cbbDonVi";
             this.cbbDonVi.Size = new System.Drawing.Size(143, 21);
             this.cbbDonVi.TabIndex = 8;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(165, 211);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(57, 23);
+            this.btnThem.TabIndex = 22;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtSoLuong
             // 
@@ -192,16 +206,6 @@
             this.txtMaThuoc.Size = new System.Drawing.Size(143, 20);
             this.txtMaThuoc.TabIndex = 1;
             // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(164, 182);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(57, 23);
-            this.btnThem.TabIndex = 22;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
             // dgvDanhSachThuoc
             // 
             this.dgvDanhSachThuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -231,15 +235,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(232, 130);
             this.panel2.TabIndex = 28;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(262, 481);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(57, 23);
-            this.button5.TabIndex = 39;
-            this.button5.Text = "Hủy";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // btnThayDoi
             // 
@@ -293,6 +288,15 @@
             this.label9.TabIndex = 29;
             this.label9.Text = "2: THAY ĐỔI GIÁ THUỐC";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(262, 481);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(57, 23);
+            this.button5.TabIndex = 39;
+            this.button5.Text = "Hủy";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnXoa);
@@ -339,6 +343,22 @@
             this.label14.Size = new System.Drawing.Size(82, 13);
             this.label14.TabIndex = 29;
             this.label14.Text = "3: XOÁ THUỐC";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(13, 185);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(37, 13);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "Mô tả:";
+            // 
+            // txtMoTa
+            // 
+            this.txtMoTa.Location = new System.Drawing.Point(78, 182);
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(143, 20);
+            this.txtMoTa.TabIndex = 23;
             // 
             // frmThuoc
             // 
@@ -398,5 +418,7 @@
         private System.Windows.Forms.ComboBox cbbMaThuoc2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtMoTa;
     }
 }

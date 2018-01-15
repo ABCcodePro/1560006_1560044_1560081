@@ -14,5 +14,6 @@ namespace Phong_Mach_Tu.DTO
         public string CachDung { get; set; }
         public int SoLuong { get; set; }
         public int GiaThuoc { get; set; }
+        public string MoTa { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-use master
+﻿use master
 if DB_ID ('QLNhaThuocTu') is not null
 drop database QLNhaThuocTu
 go
@@ -72,7 +72,8 @@ create table Thuoc
 	don_vi nvarchar(10),
 	cach_dung nchar(10),
 	so_luong int,
-	gia_thuoc int
+	gia_thuoc int,
+	mo_ta nvarchar(255)
 	primary key(ma_thuoc)
 )
 Go
@@ -158,3 +159,46 @@ Add constraint FK_HoaDon_TienKham
 Foreign key (tien_kham)
 references TienKham(tien_kham)
 
+
+
+
+INSERT [dbo].[LoaiBenh] ([ma_loai_benh], [ten_loai_benh]) VALUES (N'BC0004', N'Cảm cúm')
+INSERT [dbo].[LoaiBenh] ([ma_loai_benh], [ten_loai_benh]) VALUES (N'BD0001', N'Da liễu')
+INSERT [dbo].[LoaiBenh] ([ma_loai_benh], [ten_loai_benh]) VALUES (N'BH0005', N'Ho')
+INSERT [dbo].[LoaiBenh] ([ma_loai_benh], [ten_loai_benh]) VALUES (N'BS0003', N'Sổ mũi')
+INSERT [dbo].[LoaiBenh] ([ma_loai_benh], [ten_loai_benh]) VALUES (N'BV0002', N'Viêm họng')
+
+INSERT [dbo].[TienKham] ([tien_kham]) VALUES (30000)
+
+INSERT [dbo].[CachDung] ([ma_cach_dung], [cach_su_dung]) VALUES (N'1         ', N'Thoa ngoài da')
+INSERT [dbo].[CachDung] ([ma_cach_dung], [cach_su_dung]) VALUES (N'2         ', N'Uống')
+INSERT [dbo].[CachDung] ([ma_cach_dung], [cach_su_dung]) VALUES (N'3         ', N'Tiêm')
+INSERT [dbo].[CachDung] ([ma_cach_dung], [cach_su_dung]) VALUES (N'4         ', N'Ngậm')
+
+INSERT [dbo].[DonVi] ( [ten_don_vi]) VALUES ( N'chai')
+INSERT [dbo].[DonVi] ( [ten_don_vi]) VALUES ( N'vien')
+
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TB00001   ', N'Eumovate cream', N'chai', N'1         ', 20, N'150000    ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TB00002   ', N'Contractubex', N'chai', N'1         ', 15, N'200000    ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TB00003   ', N'Bepanthen 30g', N'chai', N'1         ', 20, N'120000    ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TB00004   ', N'Bividerm 5g', N'chai', N'1         ', 18, N'25000     ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TB00005   ', N'Crotamiton 10%-10g', N'chai', N'1         ', 22, N'50000     ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TB00006   ', N'Dibetalic 15g', N'chai', N'1         ', 10, N'30000     ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TN00001   ', N'Eugica', N'vien', N'4         ', 123, N'4000      ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TN00002   ', N'Strepsils', N'vien', N'4         ', 69, N'5000      ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TN00003   ', N'Cephalexin', N'vien', N'4         ', 90, N'2500      ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TN00004   ', N'Viên ngậm Bảo Thanh', N'vien', N'4         ', 139, N'3000      ', N'Kẹo ngậm Bảo Thanh trị các chứng bệnh về viêm họng')
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TN00005   ', N'Penicillin', N'vien', N'4         ', 200, N'2000      ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TN00006   ', N'Amoxicillin', N'vien', N'4         ', 189, N'1500      ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TT00001   ', N'CEFAZOLIN 1G', N'chai', N'3         ', 20, N'32000     ', N'Thuốc dùng để tiêm')
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TT00002   ', N'ANAXATE', N'chai', N'3         ', 30, N'2100000   ', N'Thuốc dùng để tiêm')
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TT00003   ', N'Lincomycin Injection', N'chai', N'3         ', 40, N'500000    ', N'Thuốc dùng để tiêm')
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TT00004   ', N'Adrenalin 1 mg/ 1ml', N'chai', N'3         ', 34, N'250000    ', N'Thuốc dùng để tiêm')
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TT00005   ', N'Vitamin B6 25 mg/1ml', N'chai', N'3         ', 24, N'100000    ', N'Thuốc dùng để tiêm')
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TT00006   ', N'Vitamin B1 100 mg/1ml', N'chai', N'3         ', 43, N'150000    ', N'Thuốc dùng để tiêm')
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TU00001   ', N'Diphenhydramin', N'vien', N'2         ', 50, N'1500      ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TU00002   ', N'Alimemazin', N'vien', N'2         ', 80, N'2000      ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TU00003   ', N'Paracetamol', N'vien', N'2         ', 100, N'3000      ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TU00004   ', N'Nifedipin', N'vien', N'2         ', 120, N'1000      ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TU00005   ', N'Aspirin', N'vien', N'2         ', 100, N'2500      ', NULL)
+INSERT [dbo].[Thuoc] ([ma_thuoc], [ten_thuoc], [don_vi], [cach_dung], [so_luong], [gia_thuoc], [mo_ta]) VALUES (N'TU00006   ', N'Terpin Codein', N'vien', N'2         ', 75, N'2500      ', NULL)

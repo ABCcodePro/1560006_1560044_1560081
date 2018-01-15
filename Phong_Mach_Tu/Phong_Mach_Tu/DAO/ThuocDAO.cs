@@ -32,6 +32,7 @@ namespace Phong_Mach_Tu.DAO
                     Thuoc.CachDung = row.ItemArray[3].ToString();
                     Thuoc.SoLuong = int.Parse(row.ItemArray[4].ToString());
                     Thuoc.GiaThuoc = int.Parse(row.ItemArray[5].ToString());
+                    Thuoc.MoTa = row.ItemArray[6].ToString();
 
                     listThuoc.Add(Thuoc);
                 }
@@ -43,7 +44,7 @@ namespace Phong_Mach_Tu.DAO
         public static DbAck Insert(ThuocDTO Thuoc)
         {
 
-            string sql = "insert into Thuoc(ma_thuoc,ten_thuoc,don_vi,cach_dung,so_luong,gia_thuoc) values(@Ma,@Ten,@DonVi,@CachDung,@Sl,@Gia)";
+            string sql = "insert into Thuoc(ma_thuoc,ten_thuoc,don_vi,cach_dung,so_luong,gia_thuoc,mo_ta) values(@Ma,@Ten,@DonVi,@CachDung,@Sl,@Gia,@Mota)";
 
             Dictionary<string, object> parameter = new Dictionary<string, object>();
             parameter.Add("@Ma", Thuoc.MaThuoc);
@@ -52,6 +53,7 @@ namespace Phong_Mach_Tu.DAO
             parameter.Add("@CachDung", Thuoc.CachDung);
             parameter.Add("@SL", Thuoc.SoLuong);
             parameter.Add("@Gia", Thuoc.GiaThuoc);
+            parameter.Add("@Mota", Thuoc.MoTa);
 
 
             DbAck result = DataProvider.ExecNonQuery(sql, parameter);
